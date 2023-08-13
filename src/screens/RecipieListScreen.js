@@ -8,7 +8,10 @@ const RecipieListScreen = () => {
     <SafeAreaView style={{ flex: 1, marginHorizontal: 16 }}>
       <View>
         <Header headerText={"Hi, John"} headerIcon={"bell-o"} />
-        <SearchFilter />
+        <SearchFilter
+          icon={"search"}
+          placeholder={"Enter your favorite recipie"}
+        />
       </View>
     </SafeAreaView>
   );
