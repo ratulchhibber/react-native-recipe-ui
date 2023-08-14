@@ -1,15 +1,27 @@
-import { FlatList, StyleSheet, Text, View, Image } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Pressable,
+} from "react-native";
 import React from "react";
 import { colors, recipeList } from "../Constant";
 import { FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const RecipieCard = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <FlatList
         data={recipeList}
         renderItem={({ item }) => (
-          <View
+          <Pressable
+            onPress={() => {
+              navigation.navigate("RecipieDetail");
+            }}
             style={{
               backgroundColor: colors.COLOR_LIGHT,
               shadowColor: "#000",
@@ -44,7 +56,7 @@ const RecipieCard = () => {
                 />
               </View>
             </View>
-          </View>
+          </Pressable>
         )}
         numColumns={2}
         columnWrapperStyle={{ justifyContent: "space-between" }}
