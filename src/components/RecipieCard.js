@@ -20,7 +20,7 @@ const RecipieCard = () => {
         renderItem={({ item }) => (
           <Pressable
             onPress={() => {
-              navigation.navigate("RecipieDetail");
+              navigation.navigate("RecipieDetail", { item: item });
             }}
             style={{
               backgroundColor: colors.COLOR_LIGHT,
