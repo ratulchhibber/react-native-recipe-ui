@@ -23,7 +23,7 @@ const RecipieListScreen = () => {
       </View>
 
       <View style={{ marginBottom: 16, flex: 1 }}>
-        <Text style={{ fontSize: 22, fontWeight: "bold" }}>Recipies</Text>
+        <Text style={{ fontSize: 22, fontWeight: "bold" }}>Recipes</Text>
         <RecipieCard />
       </View>
     </SafeAreaView>
