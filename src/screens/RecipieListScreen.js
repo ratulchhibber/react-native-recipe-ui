@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 import Header from "../components/Header";
 import SearchFilter from "../components/SearchFilter";
 import CategoriesFilter from "../components/CategoriesFilter";
+import RecipieCard from "../components/RecipieCard";
 
 const RecipieListScreen = () => {
   return (
@@ -14,11 +15,16 @@ const RecipieListScreen = () => {
         placeholder={"Enter your favorite recipie"}
       />
 
-      <View>
+      <View style={{ marginBottom: 16 }}>
         <Text style={{ fontSize: 22, fontWeight: "bold", marginBottom: 16 }}>
           Categories
         </Text>
         <CategoriesFilter />
+      </View>
+
+      <View style={{ marginBottom: 16, flex: 1 }}>
+        <Text style={{ fontSize: 22, fontWeight: "bold" }}>Recipies</Text>
+        <RecipieCard />
       </View>
     </SafeAreaView>
   );
